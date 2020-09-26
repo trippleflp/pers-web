@@ -1,9 +1,16 @@
 // import App from "next/app";
 import type { AppProps /*, AppContext */ } from 'next/app'
+import { ThemeProvider } from "theme-ui";
+
+import { themeBase } from "../theme"; // theme object from step 2
 import '../theme/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider theme={themeBase}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for

@@ -1,3 +1,0 @@
-```
-  <CustomButton text="Button" />
-```
