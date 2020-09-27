@@ -1,19 +1,29 @@
 import Head from 'next/head'
-import React from "react";
+import React, { Component } from "react";
 import { themeLight } from '../theme'
 /** @jsx jsx */
 import { Card, Text, jsx, Box, Button, Flex, Heading, ThemeProvider } from "theme-ui";
 import Header from '../components/Main/Header/Header';
+import Navigation from '../components/Shared/Navigation/Navigation';
 
 const siteTitle = "Welcome"
-export default function Home() {
-  return (
+export default class Home extends Component {
+
+  state = {
+    isLight: false
+  }
+  toggleNav = () => this.setState({
+    isLight: !this.state.isLight
+  })
+  
+  render(){return(
     <>
       <Head>
         <title>{siteTitle}</title>
       </Head>
 
-      <Header></Header>
+      <Navigation light={this.state.isLight} toggle={this.toggleNav}/>
+      <Header/>
 
       <ThemeProvider theme={themeLight}>
 
@@ -31,7 +41,7 @@ export default function Home() {
               <Heading>
                 Components
             </Heading>
-              <Button ml='auto'>
+              <Button ml='auto' onClick={this.toggleNav}>
                 Beep
             </Button>
             </Flex>
@@ -41,5 +51,5 @@ export default function Home() {
 
       </ThemeProvider>
     </>
-  )
+  )}
 }

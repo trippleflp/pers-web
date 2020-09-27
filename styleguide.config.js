@@ -1,6 +1,5 @@
 module.exports = {
-  components: "./components/**/*.tsx",
-  ignore: ["./components/Layout.tsx"],
+  components: "./src/components/**/*.tsx",
   propsParser: require("react-docgen-typescript").parse,
   webpackConfig: {
     module: {
@@ -19,7 +18,7 @@ module.exports = {
             "@teamsupercell/typings-for-css-modules-loader",
             {
               loader: "css-loader",
-              options: { modules: true }
+              // options: { modules: true }
             }
           ]
         }

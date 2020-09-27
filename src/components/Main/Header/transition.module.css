@@ -1,0 +1,26 @@
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-20%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes headOneTransition {
+    0% {
+      transform: translate(15%, 10%);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes headTwoTransition {
+    0% {
+      transform: translate(30%,-2% );
+    }
+    100% {
+      transform: translate(0);
+    }
+  }

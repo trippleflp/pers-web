@@ -29,7 +29,7 @@ export default {
   ],
   fontWeights: {
     body: 400,
-    heading: 700,
+    heading: 400,
     bold: 700
   },
   lineHeights: {
@@ -39,10 +39,11 @@ export default {
   colors: {
     text: "#F1EDE9",
     background: "#070404",
-    primary: "#A25D60",
+    primary: "#870007",
     secondary: "#5F658D",
     muted: "#343746",
-    // gray: "#68727A",
+    gray: "#68727A",
+    accent: "#F1EDE9"
     // lightGray: '#A7A8AD',
     // white: '#F1EDE9',
     // black: '#070404',
@@ -54,7 +55,7 @@ export default {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
-      // color: 'text',
+      color: 'text',
     },
     h1: {
       color: 'text',
